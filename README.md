@@ -1,6 +1,6 @@
 # PrakrstaFileDownloader
 
-This is a download helper written in swift 4 to download files with progress and completion callbacks. This resumes the download even if use kills the app.
+This is a download helper written in swift 4 to download files with progress and completion callbacks. This resumes the download even if user kills the app. There is one more file to manage file progress if you want to fetch progress asap.
 
 To use this file, just add it on your project and call the fucntions mentioned in the file. 
 
