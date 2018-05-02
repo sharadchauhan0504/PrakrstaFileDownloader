@@ -12,6 +12,9 @@ To use this file, just add it on your project and call the fucntions mentioned i
 ## Usage :
 
 ```
+//To start a download
+PrakrstaFileDownloader.shared.startDownload(url: "your unique video url", id: "This is nothing, you can remove it from downloader class.")
+
 override func viewWillAppear(){
     PrakrstaFileDownloader.shared.progressCallback   = downloadProgress(progress:id:)
     PrakrstaFileDownloader.shared.completionDownload = downloadCompleted(success:id:)
