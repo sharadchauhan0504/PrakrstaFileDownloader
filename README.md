@@ -13,7 +13,7 @@ To use this file, just add it on your project and call the fucntions mentioned i
 
 ```
 //To start a download
-PrakrstaFileDownloader.shared.startDownload(url: "your unique video url", id: "This is nothing, you can remove it from downloader class.")
+PrakrstaFileDownloader.shared.startDownload(url: "your unique video url")
 
 //To check if it's already in queue.
 PrakrstaFileDownloader.shared.isDownloading(url: "your unique video url")
