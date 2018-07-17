@@ -40,12 +40,12 @@ class PrakrstaFileDownloader: NSObject {
         return downloadProgressQueue.contains { $0.key == url }
     }
     
-    func startDownload(url: String, id: String) {
-        createDownloadObject(url: url, id: id)
+    func startDownload(url: String) {
+        createDownloadObject(url: url)
         requestDownload(urlString: url)
     }
     
-    func createDownloadObject(url: String, id: String) {
+    func createDownloadObject(url: String) {
         let downloadData = DownloadData()
         downloadData.isDownloading = true
         downloadData.isDownloaded = false
@@ -129,7 +129,7 @@ extension PrakrstaFileDownloader: URLSessionTaskDelegate {
         if error != nil{
             let errorString = (error! as NSError).userInfo
             if let resumeData = errorString["NSURLSessionDownloadTaskResumeData"] as? Data, let urlKey = errorString["NSErrorFailingURLStringKey"] as? String {
-                createDownloadObject(url: urlKey, id: "AfterKilling")
+                createDownloadObject(url: urlKey)
                 
                 // If you want to show progress asap uncomment these lines (To retrieve progress)
                 
